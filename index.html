@@ -1,0 +1,453 @@
+
+<html>
+  <head>
+
+    <style>
+    h1 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      text-rendering: optimizeLegibility;
+      line-height: 35px;
+    }
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 1px;
+      letter-spacing: -0.015em;
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font: normal 12px/150% Arial, Helvetica, sans-serif;
+        background: #fff;
+    }
+    table, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 2px 2px;
+        text-align: center;
+    }
+    th {
+        padding: 3px 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        background-color:#DADADA;
+        color:#000000;
+        font-size: 15px;
+        border-left: 1px solid black;
+        height: 30px;
+    }
+    table tr {
+        color: #000000;
+        border: 1px solid black;
+        font-size: 16px;
+        font-weight: normal;
+        height: 40px;
+    }
+    audio {
+      width: 150px;
+      padding: 1px;
+    }
+    div {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 100;
+      font-size: 15px;
+      line-height: 24px;
+    }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Audio samples from "Disentangling Speaker Representations from Intuitive Prosodic Features for Speaker-Adaptative and Prosody-Controllable Speech Synthesis</title>
+  </head>
+
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "Disentangling Speaker Representations from Intuitive Prosodic Features for Speaker-Adaptative and Prosody-Controllable Speech Synthesis"</h1>
+      </header>
+    </article>
+    <!-- <br> -->
+    <!-- <div style="font-size: 20px;"><b>Paper:</b> <a href="https://arxiv.org/">arXiv</a> </div> -->
+    <br>
+    <div style="font-size: 20px;"><b>Authors:</b> Pengyu Cheng, Zhenhua Ling</div>
+    <br>
+    <div style="font-size: 20px;"><b>Emails:</b> chengpengyu@xiaomi.com, zhling@ustc.edu.cn</div>
+    <br>
+    <div style="font-size: 20px; max-width: 1200px;"><b>Abstract:</b> In this paper, we propose a method of speaker-adaptative and prosody-controllable speech synthesis with a disentanglement between intuitive prosodic features and speaker representations. In this method, the intuitive prosodic features include utterance-level pitch, pitch range, speech rate and energy. A residual speaker information encoder with a set of adversarial losses is designed to extract the speaker characteristics that can't be described by these intuitive prosodic features. Further, the outputs of the residual speaker information encoder are concatenated with intuitive prosodic features to obtain complete speaker representations for acoustic feature prediction. Experimental results have demonstrated that our proposed method can synthesize speech with better naturalness and higher prosody controllability than its counterpart without the disentanglement.</div>
+
+    <br>
+    <br>
+    <div style="font-size: 20px;"><b> Comparison between proposed method and baseline model on speaker adaptation.</div>
+    <br>
+
+
+      <table width="1000px">
+        <thead>
+          <tr>
+            <th>Ground Truth</th><th>Baseline</th><th>Proposed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="6"><span>Speaker 0005: 所谓一套人马几块牌子。 </span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/GT/9.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/baseline/9.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/proposed/9.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0005: 他们需要在产品和寻求客群上花费更多精力。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/GT/10.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/baseline/10.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0005/proposed/10.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0073: 目前他已经停止啦对游戏的更新。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/GT/5.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/baseline/5.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/proposed/5.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0073:扮演数据分布与联动的信息枢纽角色。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/GT/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/baseline/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0073/proposed/6.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0133: 江苏卫视昆仑决来到泰拳之都曼谷。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/GT/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/baseline/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/proposed/6.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0133: 这些国家为应对金融危机推出的一系列刺激经济政策。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/GT/4.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/baseline/4.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0133/proposed/4.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0966: 滨海的生物有什么。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/GT/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/baseline/6.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/proposed/6.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr><td colspan="6"><span>Speaker 0966: 为什么威廉要把这些东西留下。</span></td></tr>
+          <tr>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/GT/10.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/baseline/10.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/speaker_adaptation/0966/proposed/10.wav" type="audio/wav"></audio></td>
+          </tr>
+      </table>
+
+    <br>
+    <br>
+    <br>
+    <div style="font-size: 20px;"><b> Prosody control comparison between tow models on target female speaker (0005). </div>
+    <br>
+
+    <table>
+
+      <thead>
+        <tr>
+          <td colspan="2">Variables / Input </td>
+          <th style="background-color: #4A4AFF;">-1.0</th>
+          <th style="background-color: #4d94ff;">-0.8</th>
+          <th style="background-color: #80b3ff;">-0.6</th>
+          <th style="background-color: #b3d1ff;">-0.4</th>
+          <th style="background-color: #e6f0ff;">-0.2</th>
+          <th style="background-color: #ffffff;">0.0</th>
+          <th style="background-color: #ffebe6;">0.2</th>
+          <th style="background-color: #ffc2b3;">0.4</th>
+          <th style="background-color: #ff9980;">0.6</th>
+          <th style="background-color: #ff704d;">0.8</th>
+          <th style="background-color: #FF5151;">1.0</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Pitch</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Pitch Range</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/pitch_range/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/pitch_range/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Speak Rate</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/speak_rate/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/speak_rate/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Energy</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/baseline/energy/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/female/proposed/energy/SSB00050152_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+
+    <br>
+    <br>
+    <div style="font-size: 20px;"><b> Prosody control comparison between tow models on target male speaker (0261). </div>
+    <br>
+
+    <table>
+
+      <thead>
+        <tr>
+          <td colspan="2">Variables / Input </td>
+          <th style="background-color: #4A4AFF;">-1.0</th>
+          <th style="background-color: #4d94ff;">-0.8</th>
+          <th style="background-color: #80b3ff;">-0.6</th>
+          <th style="background-color: #b3d1ff;">-0.4</th>
+          <th style="background-color: #e6f0ff;">-0.2</th>
+          <th style="background-color: #ffffff;">0.0</th>
+          <th style="background-color: #ffebe6;">0.2</th>
+          <th style="background-color: #ffc2b3;">0.4</th>
+          <th style="background-color: #ff9980;">0.6</th>
+          <th style="background-color: #ff704d;">0.8</th>
+          <th style="background-color: #FF5151;">1.0</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Pitch</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Pitch Range</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/pitch_range/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/pitch_range/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Speak Rate</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/speak_rate/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/speak_rate/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+        <tr>
+          <th style="background-color: #f2f2f2;" rowspan="2">Energy</th>
+          <td> Baseline </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/baseline/energy/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td> Proposed </td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_0.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_1.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_2.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_3.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_4.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_5.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_6.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_7.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_8.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_9.wav" type="audio/wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audio/prosody_control/male/proposed/energy/SSB02610219_10.wav" type="audio/wav"></audio></td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+  </body>
+</html>
