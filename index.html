@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>LIST</title>
+    <title>GPTTC</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 </head>
 
@@ -25,9 +25,11 @@
                     <p><b>Contents</b></p>
                     <ul>
                         <li><a href="#Speech Synthesis with Written Text and Colloquial Text">Speech Synthesis with Written Text and Colloquial Text </a></li>
-                    </ul>
+                        <li><a href="#Prompts Used in Data Distillation and Performance Evaluation">Prompts Used in Data Distillation and Performance Evaluation </a></li>
+                    </ul>                    
                     <p></p>
                 </div>
+
                 <div class="container bg-white shadow-lg pt-5 mt-5 p-5 mb-5 rounded">
                     <h2 id="Speech Synthesis with Written Text and Colloquial Text" style="text-align: center;">Speech Synthesis with Written Text and Colloquial Text</h2>
                     <div class="table-responsive pt-3">
@@ -161,6 +163,142 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+
+
+                <!-- Conversation History Section -->
+                <div class="container bg-white shadow-lg pt-4 mt-5 p-4 mb-5 rounded">
+                  <h2 id="Prompts Used in Data Distillation and Performance Evaluation" style="text-align: center;">Prompts Used in Data Distillation and Performance Evaluation</h2>
+                  <p></p>
+                  <p></p>
+                  <h4 class="mb-3">Data Distillation</h4>
+                  <div class="row">
+                    <!-- Chinese History -->
+                    <div class="col-md-6 mb-3">
+                      <div class="border rounded p-3 bg-light" style="max-height: 400px; overflow-y: auto;">
+                        <h5>原始对话 (中文)</h5>
+                        <div class="mb-3">
+                          <p><strong>User:</strong> 我希望你帮我把书面化的文本转换为口语化的文本，主要分为添加语气词和添加口癖词两种类型，下面我会分别给你两种类型的一些例子，让你更好地理解你的任务。首先是添加语气词，所添加的语气词主要可能包括（哈、呢、哦、哎），具体的例子如下：</p>
+                          <p>例子1：<br>书面语：川菜是中国八大菜系之一，有着“一菜一格，百菜百味”的美誉。<br>口语化文本：川菜是中国八大菜系之一，有着“一菜一格，百菜百味”的美誉呢。<br>...</p>
+                          <p>例子n：<br>书面语：你是不是很在意放屁这件事？其实真的不用太放在心上，<br>口语化文本：你是不是很在意放屁这件事呀？哎其实真的不用太放在心上，<br></p>
+                          <p>以上是添加语气词的例子，接下来我将给你添加口癖词的例子</p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> 好的，我会按照你的要求帮你将书面化的文本转换为口语化的文本。请继续给我口癖词的例子。</p>
+                        </div>
+                        <hr>
+                        <div>
+                          <p><strong>User:</strong> 接下来是添加口癖词的例子，所添加的口癖词主要可能包括（然后、就是、那个、呃、嗯），具体例子如下：</p>
+                          <p>例子1：<br>书面语：我比较喜欢小米 13 Ultra，它的影像能力非常出色，<br>口语化文本：我比较喜欢小米13 ultra，然后它的影像能力非常出色<br>...</p>
+                          <p>例子n：<br>书面语：最近我尝试了新出的火锅口味，麻辣鲜香，特别过瘾，推荐你试试。<br>口语化文本：最近我尝试了新出的那个火锅口味，麻辣鲜香，特别过瘾，推荐你试试。<br></p> 
+                          <p>以上是添加口癖词的例子，接下来请你结合之前给你的添加语气词以及添加口癖词的例子，对我给你提供的书面化文本进行口语化转换。</p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> 好的，我已经理解了你给出的例子。请提供你希望我转换的书面化文本，我会按照你的要求进行口语化转换。</p>
+                        </div>
+                        <hr>
+                        <!-- Final User Prompt -->
+                        <div>
+                          <p><strong>User:</strong> 请你参考上面我给你的口语化转换的所有例子，自行判断对输入文本是该添加语气词还是口癖词，把以下这几句话转换为偏口语化的文本：<br>
+                          <em>* several input written texts, separated by [\n] *</em><br>
+                          另外，转换过程中请一定注意以下几点：<br>
+                          1. 只需要向我返回你转换后的偏口语化的文本即可，不需要额外的结果。<br>
+                          2. 口语化转换的时候尽量不要删减书面语文本中原本的汉字，尽量做到向原始文本中添加汉字，同时保证转换后的口语化文本尽量自然。<br>
+                          3. 某些输入句子可能本身已经比较偏口语化了，对于这些句子无需再进行额外的口语化转换了，直接返回原本的句子即可。<br>
+                          4. 某些场景下的句子无需进行口语化转换，例如古诗词、纯英文等。<br>
+                          5. 请紧密结合我上面给你的两类例子，既要向原始文本中加入口癖词、也要尝试向原始文本中加入语气词。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- English Translation -->
+                    <div class="col-md-6 mb-3">
+                      <div class="border rounded p-3 bg-light" style="max-height: 400px; overflow-y: auto;">
+                        <h5>Translated Conversation (English)</h5>
+                        <div class="mb-3">
+                          <p><strong>User:</strong> I would like you to transform written text into a colloquial style, mainly through two methods: adding hesitation markers and habitual fillers. I'll give you examples of each so you can understand the task better. First, hesitation markers such as (ha, ne, oh, ai):</p>
+                          <p>Example 1:<br>Written: "Sichuan cuisine is one of the Eight Major Cuisines of China, known for its diversity."<br>Colloquial: "Sichuan cuisine is one of the Eight Major Cuisines of China, uh, known for its diversity."<br>...</p>
+                          <p>Example n:<br>Written: "Are you very concerned about farting? It’s really nothing to worry about."<br>Colloquial: "Are you very concerned about farting? aha, it’s really nothing to worry about."<br></p>
+                          <p>These are the hesitation marker examples. Now I will provide examples of habitual fillers.</p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> Got it. I will help you colloquialize the written text as requested. Please continue with the examples of habitual fillers.</p>
+                        </div>
+                        <hr>
+                        <div>
+                          <p><strong>User:</strong> Now for examples of habitual fillers, which may include (then, just, that, uh, um):</p>
+                          <p>Example 1:<br>Written: "I prefer the Xiaomi 13 Ultra; its imaging capabilities are outstanding."<br>Colloquial: "I prefer the Xiaomi 13 Ultra, then its imaging capabilities are outstanding."<br>...</p>
+                          <p>Example n:<br>Written: "Recently I tried the new hotpot flavor – spicy and tasty, highly recommended."<br>Colloquial: "Recently I tried that new hotpot flavor – spicy and tasty, highly recommended."<br></p> 
+                          <p>Those are the examples of habitual fillers. Please use both types of examples to convert the written text I’ll provide next.</p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> Understood. Please provide the written text you’d like me to convert into a more colloquial form.</p>
+                        </div>
+                        <hr>
+                        <!-- Final User Prompt (English) -->
+                        <div>
+                          <p><strong>User:</strong> Please refer to all the examples I’ve given for colloquialization and decide whether hesitation markers or habitual fillers should be added. Convert the following written sentences into more colloquial ones:<br>
+                          <em>* several input written texts, separated by [\n] *</em><br>
+                          Additionally, be sure to follow these instructions:<br>
+                          1. Return only the colloquialized text, no extra explanation.<br>
+                          2. Do not delete original characters; add to the original to ensure natural fluency.<br>
+                          3. If a sentence is already fairly colloquial, just return it as-is.<br>
+                          4. Skip colloquialization for sentences like classical Chinese poems or those entirely in English.<br>
+                          5. Rely closely on both example types I gave — add both hesitation markers and habitual fillers as needed.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--prompts for performance evaluation -->
+                  <p></p>
+                  <h4 class="mb-3">Performance Evaluation</h4>
+                  <div class="row">
+                    <!-- Chinese History -->
+                    <div class="col-md-6 mb-3">
+                      <div class="border rounded p-3 bg-light" style="max-height: 400px; overflow-y: auto;">
+                        <h5>原始对话 (中文)</h5>
+                        <div class="mb-3">
+                          <p><strong>User:</strong> 你是一个汉语语言学家，对于文本的口语化程度有着清晰的判断能力。接下来我会给你每组两条文本，这两条文本内容相近。请你为这两条文本分别打分，打分的关注点在于：</p>
+                          <p>1. 文本本身是否足够自然、流利。<br>2. 文本是否足够口语化，口语化程度越高且合理的句子分数越高。</p>
+                          <p>打分范围在0-5分。<br>这两条句子之间会以[\n]隔开。</p>
+                          <p> 请注意：我希望你先给出分析及打分理由，最后总结式的给出两句的分数，类似这样的格式：<br>第一句: X分 <br>第二句：X分 </p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> 好的，我会按照你的要求为你给这对句子打分，请给我需要打分的句子吧。</p>
+                        </div>
+                        <hr>
+                        <!-- Final User Prompt -->
+                        <div>
+                          <p><strong>User:</strong> 请你按照上面我给你的要求，对下面两条文本分别进行打分：<br>
+                          <em>*  Two texts to be scored, sperated by [\n] *</em><br> </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- English Translation -->
+                    <div class="col-md-6 mb-3">
+                      <div class="border rounded p-3 bg-light" style="max-height: 400px; overflow-y: auto;">
+                        <h5>Translated Conversation (English)</h5>
+                        <div class="mb-3">
+                          <p><strong>User:</strong> You are a Chinese linguist with a clear understanding of colloquial expression. I will now provide you with pairs of texts that are semantically similar. Please rate each text in the pair based on the following criteria: </p>
+                          <p>1. Whether the text is natural and fluent. <br>2. Whether the text is sufficiently colloquial—the more appropriately colloquial, the higher the score.</p>
+                          <p>The scoring range is from 0 to 5.<br>The two texts in each pair will be separated by [\n].</p>
+                          <p> Please note: I would like you to first provide analysis and reasoning for the scores, and then conclude with the final scores in the following format:<br>Sentence 1: X points <br>Sentence 2: X points</p>
+                        </div>
+                        <div>
+                          <p><strong>Assistant:</strong> Got it! I’ll follow your instructions and rate the text pair accordingly. Please send me the texts you'd like me to score.</p>
+                        </div>
+                        <hr>
+                        <!-- Final User Prompt (English) -->
+                        <div>
+                          <p><strong>User:</strong> Please rate the following two texts according to the criteria I provided above:<br>
+                          <em>*  Two texts to be scored, sperated by [\n] *</em><br> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
             </article>
         </main>
     </div>
